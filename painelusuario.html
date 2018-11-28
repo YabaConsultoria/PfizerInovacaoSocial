@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel Usuario</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!-- custom -->
+    <link href="assets/bootstrap/css/custom-styles.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            <small><b>Pfizer Inocação Social</b></small>
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Cadastrar Associação
+                            </div>
+                            <div class="panel-body">
+                                <a href="${path}/painel/conselho/cadastrar">
+                                    <center><i class="mbri-search fa" style="font-size: 100px;"></i></center></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Novo Projeto
+                            </div>
+                            <div class="panel-body">
+                                <a href="${path}/painel/entidade/cadastrar"><center><i class="fas fa-building" style="font-size: 100px;"></i></center></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- /. ROW PANEL  -->
+
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            <small><b>Projetos</b></small>
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <center>Meus Registros</center>
+                            </div>
+                            <div class="panel-body">
+                                <a href='#' data-toggle="modal" data-target="#meus-registros"><center><i class="far fa-list-alt" style="font-size: 100px;"></i></center></a>
+                            </div>
+                            <div class="panel-footer">
+                                <center><small>Visualize os cadastros realizados.</small></center>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <center>Meus Dados</center>
+                            </div>
+                            <div class="panel-body">
+                                <a href='${path}/painel/meus-dados'><center><i class="fas fa-user-cog" style="font-size: 100px;"></i></center>
+                            </div>
+                            <div class="panel-footer">
+                                <center><small>Acesse as informações cadastradas do Usuário.</small></center></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> <!-- /. ROW PANEL  -->
+                                    
+                <c:import url="/WEB-INF/views/footer/footer.jsp" />
+
+            </div> <!-- /. PAGE INNER  -->
+        </div> <!-- /. PAGE WRAPPER  -->
+    </div> <!-- FIM WRAPPER  -->
+</body>
+</html>

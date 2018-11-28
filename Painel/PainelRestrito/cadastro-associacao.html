@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="../../assets/images/logo-2160x1374.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Pfizer Inovação Social 2019</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+    <!--  Custom CSS    -->
+    <link href="assets/custom/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar" data-color="blue" data-image="assets/img/header-10.jpg">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="painel.html" class="simple-text">
+                        <img src="../../assets/images/logoPfizerBranco.png" style="width:100px; height:60px" alt="">
+                    </a>
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a href="painel.html">
+                            <i class="fas fa-desktop"></i>
+                            <p>Painel</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="perfil.html">
+                            <i class="fas fa-user-tie"></i>
+                            <p>Meus Dados</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../index.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <p>Sair</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- menu do painel -->
+        <div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Painel <i class="fas fa-angle-right"></i></span> Cadastro de
+                            Associação</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- section mostrando os projetos -->
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4 style="text-align: center; font-weight: bold;">CADASTRO DE ASSOCIAÇÃO</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <form>
+                                        <fieldset>
+                                            <legend>Dados da Associação</legend>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="razao-social">Razão Social: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="razao-social"
+                                                            name="razaoSocial" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="nome-fantasia">Nome Fantasia: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="nome-fantasia"
+                                                            name="nomeFantasia" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="cnpj">CNPJ: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="cnpj"
+                                                            name="cnpj" placeholder="99.999.999/9999-99" onchange="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="data-fundacao">Data Fundação: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="data-fundacao"
+                                                            name="dataFundacao" placeholder="99/99/9999">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="data-mandato">Mandato da Diretoria: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="data-mandato"
+                                                            name="dataMandato" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="area-de-atuacao">Área de Atuação: <span class="campo-obrigatorio">*</span></label>
+                                                        <select id="area-de-atuacao" name="associacao.areaAtuacao"
+                                                            class="form-control custom-cadastro" required>
+                                                            <option value="Opção 01">Opção 01</option>
+                                                            <option value="Opção 02">Opção 02</option>
+                                                            <option value="Opção 03">Opção 03</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="quantidade-funcionarios">Funcionários CLT: <span
+                                                                class="campo-obrigatorio">*</span></label>
+                                                        <input type="number" class="form-control custom-cadastro" id="quantidade-funcionarios"
+                                                            name="quantidadeFuncionarios" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="quantidade-voluntarios">Voluntários: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="number" class="form-control custom-cadastro" id="quantidade-voluntarios"
+                                                            name="quantidadeVoluntarios" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset style="margin-top: 70px;">
+                                            <legend>Endereço</legend>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="cep">CEP: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="cep"
+                                                            name="endereco.cep" placeholder="99999-999">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="logradouro">Logradouro: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="logradouro"
+                                                            name="endereco.logradouro" placeholder="Exemplo: Rua, Avenida, Alameda, etc ...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label for="numero">Nº:</label>
+                                                        <input type="text" class="form-control custom-cadastro" id="numero"
+                                                            name="endereco.numero" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="complemento">Complemento:</label>
+                                                        <input type="text" class="form-control custom-cadastro" id="complemento"
+                                                            name="endereco.complemento" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="bairro">Bairro: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="bairro"
+                                                            name="endereco.bairro" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="cidade">Cidade: <span class="campo-obrigatorio">*</span></label>
+                                                        <input type="text" class="form-control custom-cadastro" id="cidade"
+                                                            name="endereco.cidade" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="estado">Estado: <span class="campo-obrigatorio">*</span></label>
+                                                        <select class="form-control custom-cadastro" id="estado" name="endereco.estado">
+                                                            <option value="">Selecione um Estado</option>
+                                                            <option value="Acre">Acre</option>
+                                                            <option value="Alagoas">Alagoas</option>
+                                                            <option value="Amapá">Amapá</option>
+                                                            <option value="Amazonas">Amazonas</option>
+                                                            <option value="Bahia">Bahia</option>
+                                                            <option value="Ceará">Ceará</option>
+                                                            <option value="Distrito Federal">Distrito Federal</option>
+                                                            <option value="Espírito Santo">Espírito Santo</option>
+                                                            <option value="Goiás">Goiás</option>
+                                                            <option value="Maranhão">Maranhão</option>
+                                                            <option value="Mato Grosso">Mato Grosso</option>
+                                                            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                                            <option value="Minas Gerais">Minas Gerais</option>
+                                                            <option value="Pará">Pará</option>
+                                                            <option value="Paraíba">Paraíba</option>
+                                                            <option value="Paraná">Paraná</option>
+                                                            <option value="Pernambuco">Pernambuco</option>
+                                                            <option value="Piauí">Piauí</option>
+                                                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                                            <option value="Rio Grane do Norte">Rio Grande do Norte</option>
+                                                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                                            <option value="Rondônia">Rondônia</option>
+                                                            <option value="Roraima">Roraima</option>
+                                                            <option value="Santa Catarina">Santa Catarina</option>
+                                                            <option value="São Paulo">São Paulo</option>
+                                                            <option value="Sergipe">Sergipe</option>
+                                                            <option value="Tocantins">Tocantins</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset style="margin-top: 70px;">
+                                            <legend>Redes Sociais</legend>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="website"><i class="fas fa-laptop"></i> Website:</label>
+                                                        <input type="text" class="form-control custom-cadastro" id="website"
+                                                            name="redesSociais.website" placeholder="http://www.seusite.com.br">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label for="facebook"><i class="fab fa-facebook"></i> Perfil do
+                                                            Facebook:</label>
+                                                        <input type="text" class="form-control custom-cadastro" id="facebook"
+                                                            name="redesSociais.facebook" placeholder="@seuperfil">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="seguidores-facebook"><i class="fab fa-facebook"></i>
+                                                            Seguidores:</label>
+                                                        <input type="number" class="form-control custom-cadastro" id="seguidores-facebook"
+                                                            name="redesSociais.seguidoresFacebook" placeholder="999">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label for="instagram"><i class="fab fa-instagram"></i> Perfil
+                                                            do Instagram:</label>
+                                                        <input type="text" class="form-control custom-cadastro" id="instagram"
+                                                            name="redesSociais.instagram" placeholder="@seuperfil">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="seguidores-instagram"><i class="fab fa-instagram"></i>
+                                                            Seguidores:</label>
+                                                        <input type="number" class="form-control custom-cadastro" id="seguidores-instagram"
+                                                            name="redesSociais.seguidoresInstagram" placeholder="999">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset style="margin-top: 70px;">
+                                            <legend>Documentos Anexos</legend>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <center>
+                                                            <label for="cartao-cnpj"><i class="far fa-credit-card"
+                                                                    style="font-size: 78px;"></i>
+                                                                <hr>Cartão CNPJ: <span class="campo-obrigatorio">*</span></label>
+                                                            <br>
+                                                            <small>Formatos aceitos: <b style="color: red;">pdf, jpg,
+                                                                    jpeg, png.</b></small>
+                                                            <input type="file" class="form-control custom-cadastro" id="cartao-cnpj"
+                                                                name="documentosAssociacao.cartaoCnpj" required
+                                                                onchange="validaImgPdf(this, this.id)">
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <center>
+                                                            <label for="estatuto-social"><i class="far fa-bookmark"
+                                                                    style="font-size: 78px;"></i>
+                                                                <hr>Estatuto Social: <span class="campo-obrigatorio">*</span></label>
+                                                            <br>
+                                                            <small>Formatos aceitos: <b style="color: red;">pdf, jpg,
+                                                                    jpeg, png.</b></small>
+                                                            <input type="file" class="form-control custom-cadastro" id="estatuto-social"
+                                                                name="documentosAssociacao.estatutoSocial" required
+                                                                onchange="validaImgPdf(this, this.id)">
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <center>
+                                                            <label for="ata-eleicao"><i class="fab fa-elementor" style="font-size: 78px;"></i>
+                                                                <hr>Ata de Eleição: <span class="campo-obrigatorio">*</span></label>
+                                                            <br>
+                                                            <small>Formatos aceitos: <b style="color: red;">pdf, jpg,
+                                                                    jpeg, png.</b></small>
+                                                            <input type="file" class="form-control custom-cadastro" id="ata-eleicao"
+                                                                name="documentosAssociacao.ataEleicao" required
+                                                                onchange="validaImgPdf(this, this.id)">
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <center>
+                                                            <label for="identidade-membros"><i class="far fa-address-card"
+                                                                    style="font-size: 78px;"></i>
+                                                                <hr>Identidade dos Diretores: <span class="campo-obrigatorio">*</span></label>
+                                                            <br>
+                                                            <small>Formatos aceitos: <b style="color: red;">pdf</b></small>
+                                                            <input type="file" class="form-control custom-cadastro" id="identidade-membros"
+                                                                name="documentosAssociacao.identidadeMembros" required
+                                                                onchange="validaPdf(this, this.id)">
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <center>
+                                                            <label for="resultados-anuais"><i class="fas fa-poll" style="font-size: 78px;"></i>
+                                                                <hr>Resultados Anuais: <span class="campo-obrigatorio">*</span></label>
+                                                            <br>
+                                                            <small>Formatos aceitos: <b style="color: red;">pdf, jpg,
+                                                                    jpeg, png.</b></small>
+                                                            <input type="file" class="form-control custom-cadastro" id="resultados-anuais"
+                                                                name="documentosAssociacao.resultadosAnuais" required
+                                                                onchange="validaImgPdf(this, this.id)">
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botões -->
+                <fieldset style="margin-top:20px;">
+                    <div class="row">
+                        <div class="col-md-3" style="margin-left: 25%;">
+                            <a href="projeto-cadastrado-com-sucesso.html" class="form-control custom-button-cadastro">
+                                <center>Cadastrar</center>
+                            </a>
+                        </div>
+                        <div class="col-md-3 ">
+                            <a href="painel.html" class="form-control custom-button-cadastro">
+                                <center>Voltar</center>
+                            </a>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Botões -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!--   Core JS Files   -->
+<script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
+<script src="assets/js/cnpj-validator.js" type="text/javascript"></script>
+<script src="assets/js/api-via-cep.js"></script>
+<script src="assets/js/file-validator.js"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Charts Plugin -->
+<script src="assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="assets/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
+
+<script type="text/javascript">
+    $("#cnpj").mask("99.999.999/9999-99");
+    $("#data-fundacao").mask("99/99/9999");
+    $("#data-mandato").mask("99/99/9999");
+    $("#cep").mask("99999-999");
+</script>
+
+
+</html>
